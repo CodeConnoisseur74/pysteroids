@@ -1,9 +1,10 @@
-from turtle import width
-import pygame
-import sys
+import math
 import os
 import random
-import math
+import sys
+from turtle import width
+
+import pygame
 from pygame.locals import *
 
 pygame.init()
