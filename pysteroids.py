@@ -10,7 +10,6 @@ from pygame.locals import *
 pygame.init()
 fps = pygame.time.Clock()
 
-
 # colors
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -22,11 +21,9 @@ WIDTH = 800
 HEIGHT = 600
 time = 0
 
-
 # canvas declaration
 window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption("Pysteroids")
-
 
 # load images
 bg = pygame.image.load(os.path.join("images", "bg.jpg"))
