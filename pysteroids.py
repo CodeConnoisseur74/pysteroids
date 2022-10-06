@@ -24,12 +24,12 @@ time = 0
 
 # canvas declaration
 window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
-pygame.display.set_caption('Pysteroids')
+pygame.display.set_caption("Pysteroids")
 
 
 # load images
-bg = pygame.image.load(os.path.join('images', 'bg.jpg'))
-debris = pygame.image.load(os.path.join('images', 'debris2_brown.png'))
+bg = pygame.image.load(os.path.join("images", "bg.jpg"))
+debris = pygame.image.load(os.path.join("images", "debris2_brown.png"))
 
 # draw game function
 
@@ -38,8 +38,8 @@ def draw(canvas):
     global time
     canvas.fill(BLACK)
     canvas.blit(bg, (0, 0))
-    canvas.blit(debris, (time * .3, 0))
-    canvas.blit(debris, (time * .3-WIDTH, 0))
+    canvas.blit(debris, (time * 0.3, 0))
+    canvas.blit(debris, (time * 0.3 - WIDTH, 0))
     time = time + 1
 
 
