@@ -7,6 +7,7 @@ Readme.md
 [Link to Live Project](lhttps://herokuapp.com/)
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [UX](#ux)
   - [User Stories](#user-stories)
@@ -33,18 +34,18 @@ Some introductory text about the site and its goals.
 
 ### User Stories
 
-| ID | As a... | I Want To Be Able To... | So That I Can...|
-| --- | --- | --- | --- |
-| 01 | User | Some capability e.g. navigate site | Some benefit |
-| 02 | User | Some capability | Some benefit |
-| 03 | User | Some capability | Some benefit |
+| ID  | As a... | I Want To Be Able To...            | So That I Can... |
+| --- | ------- | ---------------------------------- | ---------------- |
+| 01  | User    | Some capability e.g. navigate site | Some benefit     |
+| 02  | User    | Some capability                    | Some benefit     |
+| 03  | User    | Some capability                    | Some benefit     |
 
 ### Wireframes
 
 The following wireframes were created to help plan the layout of the site:
 
-* [Homepage](path to file)
-* [another page](path to file)
+- [Homepage](path to file)
+- [another page](path to file)
 
 ## Features
 
@@ -52,30 +53,31 @@ The following wireframes were created to help plan the layout of the site:
 
 #### Name of feature
 
-* Description of feature and benefit
-* Description of feature and benefit
+- Description of feature and benefit
+- Description of feature and benefit
 
 ![Feature Name](image path)
 
 #### Name of feature
 
-* Description of feature and benefit
-* Description of feature and benefit
+- Description of feature and benefit
+- Description of feature and benefit
 
 ![Feature Name](image path)
 
 ### Features Left to Implement
 
-* Describe some features that we would like to implement in the future
+- Describe some features that we would like to implement in the future
 
 ## Technologies Used
 
 ### Languages Used
-*[Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+\*[Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 
 ### Frameworks, Libraries & Programs Used
 
-* [Random](https://docs.python.org/3/library/random.html)
+- [Random](https://docs.python.org/3/library/random.html)
 
 ## Testing
 
@@ -131,40 +133,41 @@ This program was deployed to Heroku, following the below steps:
 
     The link to my Heroku app is: https://herokuapp.com/
 
-
-
-
 ### Forking the GitHub Repository
 
 The following steps can be used to fork the GitHub repository:
-* On GitHub navigate to the main page of the repository.
-* The 'Fork' button can be found on the top righthand side of the screen.
-* Click the button to create a copy of the original repository.
+
+- On GitHub navigate to the main page of the repository.
+- The 'Fork' button can be found on the top righthand side of the screen.
+- Click the button to create a copy of the original repository.
 
 ### Cloning the GitHub Repository
 
 The following steps can be used to clone the GitHub repository:
-* On GitHub navigate to the main page of the repository.
-* Above the list of files select 'Code'.
-* Three options are provided, HTTPS, SSH and GitHub CLI. Select the appropriate option and click the 'Copy' button next to the URL.
-* Open Git Bash.
-* Change the working directory to the location for the cloned directory.
-* Type git clone and paste the copied URL.
-* Press 'Enter' to create the clone.
+
+- On GitHub navigate to the main page of the repository.
+- Above the list of files select 'Code'.
+- Three options are provided, HTTPS, SSH and GitHub CLI. Select the appropriate option and click the 'Copy' button next to the URL.
+- Open Git Bash.
+- Change the working directory to the location for the cloned directory.
+- Type git clone and paste the copied URL.
+- Press 'Enter' to create the clone.
 
 ## Credits
 
 ### Code
 
-* Credit and articles etc that we have copied code from
+- Credit and articles etc that we have copied code from
 
 ### Content
-* credit fonts and font awesome icons etc
-* Credit and sites we have taken information from
+
+- credit fonts and font awesome icons etc
+- Credit and sites we have taken information from
 
 ### Media
-* Credit images used
+
+- Credit images used
 
 ### Other
 
-* Any other credits
+- Any other credits
