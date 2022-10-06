@@ -1,39 +1,43 @@
+import math
+import os
+import random
+import sys
 from turtle import width
-import pygame, sys, os, random, math
+
+import pygame
 from pygame.locals import *
 
 pygame.init()
 fps = pygame.time.Clock()
 
-
 # colors
-WHITE = (255,255,255)
-RED = (255,0,0)
-GREEN = (0,255,0)
-BLACK = (0,0,0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
 
-#globals
+# globals
 WIDTH = 800
 HEIGHT = 600
 time = 0
 
-
-#canvas declaration
+# canvas declaration
 window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
-pygame.display.set_caption('Pysteroids')
+pygame.display.set_caption("Pysteroids")
 
-
-#load images
-bg = pygame.image.load(os.path.join('images','bg.jpg'))
-debris = pygame.image.load(os.path.join('images','debris2_brown.png'))
+# load images
+bg = pygame.image.load(os.path.join("images", "bg.jpg"))
+debris = pygame.image.load(os.path.join("images", "debris2_brown.png"))
 
 # draw game function
+
+
 def draw(canvas):
     global time
     canvas.fill(BLACK)
-    canvas.blit(bg, (0,0))
-    canvas.blit(debris, (time* .3,0))
-    canvas.blit(debris,(time* .3-WIDTH,0))
+    canvas.blit(bg, (0, 0))
+    canvas.blit(debris, (time * 0.3, 0))
+    canvas.blit(debris, (time * 0.3 - WIDTH, 0))
     time = time + 1
 
 
