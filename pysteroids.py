@@ -30,6 +30,21 @@ bg = pygame.image.load(os.path.join("images", "bg.jpg"))
 debris = pygame.image.load(os.path.join("images", "debris2_brown.png"))
 ship = pygame.image.load(os.path.join("images", "ship.png"))
 
+ship_x = WIDTH/2 -50
+ship_y = HEIGHT/2 -50
+ship_angle = 0
+
+
+def rot_center(image, angle):
+    """rotate a surface, maintaining position"""
+
+    orig_rect = image.get_rect()
+    rot_image = pygame.transform.rotate(image, angle)
+    rot_rect = orig_rect.copy()
+    rot_rect.center = rot_image.get_rect().center
+    rot_image = rot_image.subsurface(rot_rect).copy()
+    return rot_image
+
 
 # draw game function
 def draw(canvas):
@@ -39,13 +54,9 @@ def draw(canvas):
     canvas.blit(debris, (time * 0.3, 0))
     canvas.blit(debris, (time * 0.3 - WIDTH, 0))
     time = time + 1
-    canvas.blit(ship, (WIDTH/2 -50,HEIGHT/2 -50))
 
 
-# (0,0)
-# (width,0)
-# (0,height)
-# (width,height)
+    canvas.blit( rot_center(ship,ship_angle) , (ship_x, ship_y))
 
 
 # handle input function
