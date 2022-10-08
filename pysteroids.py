@@ -43,12 +43,15 @@ ship_speed = 0
 
 asteroid_x = []  # random.randint(0, WIDTH)
 asteroid_y = []  # random.randint(0, HEIGHT)
+asteroid_angle = []
+asteroid_speed = 2
 no_asteroids = 5
 
 
 for i in range(0, no_asteroids):
     asteroid_x.append(random.randint(0, WIDTH))
     asteroid_y.append(random.randint(0, HEIGHT))
+    asteroid_angle.append(random.randint(0, 365))
 
 
 def rot_center(image, angle):
@@ -128,9 +131,17 @@ def update_screen():
     fps.tick(60)
 
 
+def game_logic():
+    for i in range(0, no_asteroids):
+        asteroid_x[i] = (
+            asteroid_x[i] + math.cos(math.radians(asteroid_angle[i]))*asteroid_speed)
+        asteroid_y[i] = (
+            asteroid_y[i] + -math.sin(math.radians(asteroid_angle[i]))*asteroid_speed)
+
+
 # pysteroids game loop
 while True:
     draw(window)
     handle_input()
-    # game_logic()
+    game_logic()
     update_screen()
