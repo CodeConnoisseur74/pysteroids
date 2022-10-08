@@ -1,3 +1,4 @@
+from turtle import distance
 import pygame
 import sys
 import os
@@ -43,12 +44,15 @@ ship_speed = 0
 
 asteroid_x = []  # random.randint(0, WIDTH)
 asteroid_y = []  # random.randint(0, HEIGHT)
+asteroid_angle = []
+asteroid_speed = 2
 no_asteroids = 5
 
 
 for i in range(0, no_asteroids):
     asteroid_x.append(random.randint(0, WIDTH))
     asteroid_y.append(random.randint(0, HEIGHT))
+    asteroid_angle.append(random.randint(0, 365))
 
 
 def rot_center(image, angle):
@@ -128,9 +132,42 @@ def update_screen():
     fps.tick(60)
 
 
+def isCollision(enemyX, enemyY, bulletX, bulletY):
+    distance = math.sqrt(math.pow(bulletX - bulletY, 2) +
+                         (math.pow(enemyY - bulletY, 2)))
+    if distance < 27:
+        return True
+    else:
+        return False
+
+
+def game_logic():
+    for i in range(0, no_asteroids):
+        asteroid_x[i] = (
+            asteroid_x[i] + math.cos(math.radians(asteroid_angle[i]))*asteroid_speed)
+        asteroid_y[i] = (
+            asteroid_y[i] + -math.sin(math.radians(asteroid_angle[i]))*asteroid_speed)
+
+        if asteroid_y[i] < 0:
+            asteroid_y[i] = HEIGHT
+
+        if asteroid_y[i] > HEIGHT:
+            asteroid_y[i] = 0
+
+        if asteroid_x[i] < 0:
+            asteroid_x[i] = WIDTH
+
+        if asteroid_x[i] > WIDTH:
+            asteroid_x[i] = 0
+
+        if isCollision(ship_x, ship_y, asteroid_x[i], asteroid_y[i]):
+            print('Game Over')
+            exit()
+
+
 # pysteroids game loop
 while True:
     draw(window)
     handle_input()
-    # game_logic()
+    game_logic()
     update_screen()
