@@ -28,6 +28,7 @@ pygame.display.set_caption('Pysteroids')
 bg = pygame.image.load(os.path.join('images', 'bg.jpg'))
 debris = pygame.image.load(os.path.join('images', 'debris2_brown.png'))
 ship = pygame.image.load(os.path.join('images', 'ship.png'))
+ship_thrusted = pygame.image.load(os.path.join('images', 'ship_thrusted.png'))
 
 
 ship_x = WIDTH/2 - 50
@@ -53,13 +54,17 @@ def rot_center(image, angle):
 # draw game function
 def draw(canvas):
     global time
+    global ship_is_forward
     canvas.fill(BLACK)
     canvas.blit(bg, (0, 0))
     canvas.blit(debris, (time * 0.3, 0))
     canvas.blit(debris, (time * 0.3 - WIDTH, 0))
     time = time + 1
 
-    canvas.blit(rot_center(ship, ship_angle), (ship_x, ship_y))
+    if ship_is_forward:
+        canvas.blit(rot_center(ship_thrusted, ship_angle), (ship_x, ship_y))
+    else:
+        canvas.blit(rot_center(ship, ship_angle), (ship_x, ship_y))
 
 
 # handle input function
